@@ -1,0 +1,93 @@
+.seacrh {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid #999;
+  box-shadow: 2px 2px 2px #999;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.seacrh form select {
+  width: 80px;
+  height: 35px;
+  border: none;
+  outline: none;
+
+  border: 350px;
+  border-radius: 5px;
+  margin-right: 15px;
+  padding: 0px 10px;
+}
+
+.seacrh form input[type="text"] {
+  width: 350px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0px 10px;
+
+  border-bottom: 4.5 solid pink;
+}
+
+.seacrh form input[type="submit"] {
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  border: 3px solid skyblue;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  box-shadow: 2px 2px 6px rgb(142, 221, 240);
+
+  transition: 0.3s;
+}
+
+.seacrh form input[type="submit"]:hover {
+  border: none;
+  background-color: skyblue;
+  color: #fff;
+}
+
+.booklist,
+.bookDetailList {
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.booklist ul,
+.bookDataList ul {
+  width: 100%;
+  height: 30px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.booklist ul li {
+  height: 100%;
+  background-color: slateblue;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookDataList ul li {
+  height: 100%;
+  border-bottom: 1px solid #999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

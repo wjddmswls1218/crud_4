@@ -91,3 +91,31 @@
   align-items: center;
   justify-content: center;
 }
+
+.bookList ul li:not(:last-child) {
+  border-right: 2px #fff solid;
+}
+.bookList ul li:nth-child(1),
+.bookDataList ul li:nth-child() {
+  width: 5px;
+}
+
+.bookList ul li:nth-child(2),
+.bookDataList ul li:nth-child(2) {
+  width: 50%;
+}
+
+.bookList ul li:nth-child(3),
+.bookDataList ul li:nth-child(3) {
+  width: 10%;
+}
+
+.bookList ul li:nth-child(4),
+.bookDataList ul li:nth-child(4) {
+  width: 15%;
+}
+
+.bookList ul li:nth-child(5),
+.bookDataList ul li:nth-child(5) {
+  width: 20%;
+}

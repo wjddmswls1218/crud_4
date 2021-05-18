@@ -3,7 +3,7 @@ extends ./layouts/base.pug
         section.search  
             form(action="/" method="get")
                 select(name="seq")
-                    option(value="title") 제목
+                    option(value="title") 타이틀
                     option(value="author") 작가
                 input(type="text" name="searchValue" placeholder="검색어를 입력하세요")
                 input(type="submit" value="Search")
@@ -21,4 +21,4 @@ extends ./layouts/base.pug
                     li #{data.title}
                     li #{data.location}
                     li #{data.author}
-                    li #{data.price} 원
+                    li #{data.price} $

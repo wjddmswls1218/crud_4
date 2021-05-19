@@ -8,36 +8,33 @@ export const homeController = async (req, res) => {
 
   console.log(seq);
   console.log(searchValue);
-
   try {
-    if (!seq && searchValue) {
-      const books = await Books.find().populate({
+    if (!seq && !searchValue) {
+      const books = await Book.find().populate({
         path: `author`,
         model: Author,
       });
       res.render("screens/home", { books: books });
     } else {
       if (seq === "title") {
-        const books = await Books.find({
+        const books = await Book.find({
           title: { $regex: `.*${searchValue}.*` },
         }).populate({
           path: `author`,
           model: Author,
         });
         res.render("screens/home", { books: books });
-      } else {
-        if (seq === "author") {
-          const books = await Books.find().populate({
-            path: `author`,
-            model: Author,
-            match: {
-              name: { regex: `.*${searchValue}.*` },
-            },
-          });
-          const nextBook = books.filter((data) => data.author !== aull);
+      } else if (seq === "author") {
+        const books = await Book.find().populate({
+          path: `author`,
+          model: Author,
+          match: {
+            name: { $regex: `.*${searchValue}.*` },
+          },
+        });
+        const nextBooks = books.filter((data) => data.author !== null);
 
-          res.render("screens/home", { books: nextBook });
-        }
+        res.render("screens/home", { books: nextBooks });
       }
     }
   } catch (e) {

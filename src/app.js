@@ -24,5 +24,5 @@ app.use(bodyParser.json());
 connect();
 
 app.listen(PORT, () => {
-  console.log(` Server Start, http://locahost:${PORT}`);
+  console.log(` Server Start ${PORT}`);
 });

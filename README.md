@@ -2,7 +2,7 @@
 
 # BOOK AND AUTHOR Management System Platform
 
-- [ ] HOME ("/")
+- [ X ] HOME ("/")
 
 ## Management Page
 

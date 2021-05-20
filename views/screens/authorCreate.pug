@@ -1,0 +1,20 @@
+extends ../layouts/adminbase.pug
+
+block content
+        form(action="/admin/postCreateAuthor" method="POST")
+                div
+                        label(for="authorName")  작가명
+                        input(type="text" id="authorName" name="authorName" placeholder="작가명을 입력하세요")
+                div
+                        label(for="authorBirth")  생년월일
+                        input(type="text" id="authorBirth" name="authorBirth" placeholder="OOOO/OO/OO")
+                div
+                        label(for="authorBelong")  소속사
+                        input(type="text" id="authorbelong" name="authorbelong" placeholder="소속사을 입력하세요")
+                        
+                div
+                        label(for="authorGender")  성별
+                        select(id="authorGender" name="authorGender")
+                                option(value="남성" select) 남성
+                                option(value="여성") 여성
+                        button 추가하기

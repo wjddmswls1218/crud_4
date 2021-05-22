@@ -14,7 +14,7 @@ const app = express();
 connect();
 
 app.set("view engine", "pug");
-app.use(helmet());
+//app.use(helmet());
 app.use(morgan(`dev`));
 app.use(express.static(path.join(__dirname, "/assets")));
 app.use(bodyParser.urlencoded({ extended: false }));
